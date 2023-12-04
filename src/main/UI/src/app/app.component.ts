@@ -27,15 +27,26 @@ export class AppComponent implements OnInit{
   request!:ReserveRoomRequest;
   currentCheckInVal!:string;
   currentCheckOutVal!:string;
+  messages: String[] = [];
 
-    ngOnInit(){
+
+  getWelcomeMessage() {
+    return this.httpClient.get<string[]>("http://localhost:8080/welcome")
+  }
+
+  ngOnInit(){
       this.roomsearch= new FormGroup({
         checkin: new FormControl(' '),
         checkout: new FormControl(' ')
-      });
+      }
 
- //     this.rooms=ROOMS;
+      );
 
+      //   this.rooms=ROOMS;
+
+    this.getWelcomeMessage().subscribe((data) => {
+      this.messages=data;
+    });
 
     const roomsearchValueChanges$ = this.roomsearch.valueChanges;
 
