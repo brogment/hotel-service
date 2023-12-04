@@ -23,13 +23,21 @@
   <div class="scene" id="welcome">
     <article class="content">
 
-<!--  section for welcome messages -->
-      <div *ngIf="messages && messages.length > 0">
+       <!--     section for welcome messages -->
+    <ng-container *ngIf="messages$ | async as messages">
+      <div *ngIf="messages.length > 0">
         <div *ngFor="let message of messages">
           <p>{{ message }}</p>
         </div>
       </div>
+    </ng-container>
+      <!--     end of section for welcome messages -->
 
+      <!--      section for presentation-->
+      <div>
+        <p>{{presentation$ | async}}</p>
+      </div>
+      <!--     end of section for presentation-->
 
       <div class="row">
         <div class=""col-12>
