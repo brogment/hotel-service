@@ -1,6 +1,5 @@
 package edu.wgu.d387_sample_code.config;
 
-
 import edu.wgu.d387_sample_code.convertor.ReservationEntityToReservationResponseConverter;
 import edu.wgu.d387_sample_code.convertor.ReservationRequestToReservationEntityConverter;
 import edu.wgu.d387_sample_code.convertor.RoomEntityToReservableRoomResponseConverter;
@@ -14,7 +13,6 @@ import org.springframework.core.convert.converter.Converter;
 
 import java.util.HashSet;
 import java.util.Set;
-
 @Configuration public class ConversionConfig {
 
         @Autowired

@@ -8,17 +8,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * Project: D387 sample code
- * Package: edu.wgu.d387_sample_code.convertor
- * <p>
- * User: carolyn.sher
- * Date: 9/16/2022
- * Time: 4:54 PM
- * <p>
- * Created with IntelliJ IDEA
- * To change this template use File | Settings | File Templates.
- */
 @Service
 public class RoomServiceImpl implements RoomService{
     private RoomRepository roomRepository;
@@ -27,7 +16,6 @@ public class RoomServiceImpl implements RoomService{
     public  RoomServiceImpl(RoomRepository roomRepository){
         this.roomRepository=roomRepository;
     }
-
 
     @Override
     public RoomEntity findById(long theId) {
@@ -53,6 +41,4 @@ public class RoomServiceImpl implements RoomService{
     public List<RoomEntity> findAll() {
         return (List<RoomEntity>)roomRepository.findAll();
     }
-
-
 }

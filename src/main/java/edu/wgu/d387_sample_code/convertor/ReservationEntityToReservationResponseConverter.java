@@ -1,6 +1,5 @@
 package edu.wgu.d387_sample_code.convertor;
 
-
 import edu.wgu.d387_sample_code.entity.ReservationEntity;
 import edu.wgu.d387_sample_code.model.response.ReservationResponse;
 import org.springframework.core.convert.converter.Converter;

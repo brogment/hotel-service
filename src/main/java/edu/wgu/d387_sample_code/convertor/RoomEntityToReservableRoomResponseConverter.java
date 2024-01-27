@@ -31,7 +31,4 @@ public class RoomEntityToReservableRoomResponseConverter implements Converter<Ro
 		
 		return reservationResponse;
 	}
-
-	
-	
 }
